@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+</head>
+
+<body>
+<form  method ="get" action="pouet.php">
+	<input name="prenom" placeholder="prenom" value="<? =$prenom ?>" /><br/>
+	<?php
+	 if (!empty($_GET) && empty($prenom)) {
+	 echo '<style="border-color:red;"></style>';
+	} 
+	?>
+	<input name= "nom"  placeholder="nom" value="<? =$nom ?>" /><br/>
+	<?php
+	 if (!empty($_GET) && empty($nom)){
+	 echo '<style="border-color:red;">'</style>';
+	 	} 
+	?>
+	<input  type= "submit" />
+</form>
+
+</body>
+</html>
